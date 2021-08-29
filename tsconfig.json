@@ -1,18 +1,28 @@
 {
-  "compileOnSave": true,
+  "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
     "downlevelIteration": true,
-    "esModuleInterop": true,
-    "inlineSourceMap": true,
-    "lib": ["es2020"],
-    "module": "CommonJS",
-    "noImplicitAny": false,
-    "outDir": "lib",
+    "experimentalDecorators": true,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
     "resolveJsonModule": true,
-    "strict": true,
-    "strictNullChecks": false,
-    "target": "ES5",
-    "watch": true
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2020",
+      "dom"
+    ]
   },
-  "include": ["src", ".env"]
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
 }
